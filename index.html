@@ -10,7 +10,10 @@
 
     </header>
     <main>
-        <div id="display"></div>
+        <div id="display">
+            <p id="digit-display"></p>
+            <p id="operation-display"></p>
+        </div>
         <div id="controls">
             <div id="numerals">
                 <button id="1" class="numeral">1</button>
@@ -24,17 +27,18 @@
                 <button id="9" class="numeral">9</button>
                 <button id="0" class="numeral">0</button>
             </div>
+            <div id="partition"></div>
             <div id="operations">
                 <button id="add" class="operation">+</button>
                 <button id="subtract" class="operation">-</button>
                 <button id="multiply" class="operation">*</button>
                 <button id="divide" class="operation">/</button>
-                <button id="equals" class="operation">=</button>
             </div>
+            <button id="equals">=</button>
             <button id="clear">Clear</button>
         </div>
 
-        
+        <script src="js/calculator.js"></script>
 
     </main>
     <footer>

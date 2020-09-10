@@ -1,4 +1,5 @@
 body {
+    position: relative;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -7,6 +8,7 @@ body {
 }
 
 main {
+    position: relative;
     width: 30vw;
     height: 70vh;
     margin: 5% auto;
@@ -15,6 +17,7 @@ main {
 }
 
 #display {
+    position: relative;
     width: 90%;
     height: 4em;
     margin: 10% auto;
@@ -22,7 +25,28 @@ main {
     border-width: 2px;
 }
 
+#digit-display {
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    bottom: 0;
+    /*transform: translateY(0%);*/
+    background-color: silver;
+    text-align: right;
+}
+
+#operation-display {
+    position: absolute;
+    width: 15%;
+    height: 20%;
+    bottom: 0;
+    transform: translateY(-100%);
+    background-color: pink;
+    text-align: left;
+}
+
 #controls {
+    position: relative;
     width: 90%;
     height: 60%;
     margin: 5% auto;
@@ -32,6 +56,7 @@ main {
 }
 
 #numerals {
+    position: relative;
     width: 60%;
     height: auto;
     display: grid;
@@ -40,7 +65,18 @@ main {
     float: left;
 }
 
+#partition {
+    position: relative;
+    width: 1px;
+    height: 30%;
+    margin: 0 5px;
+    background-color: grey;
+    float: left;
+    box-shadow: 0 0 3px silver;
+}
+
 #operations {
+    position: relative;
     width: 20%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);

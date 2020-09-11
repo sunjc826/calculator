@@ -65,6 +65,11 @@ main {
     float: left;
 }
 
+.disabled {
+    background-color: grey;
+    border-style: dashed;
+}
+
 #partition {
     position: relative;
     width: 1px;

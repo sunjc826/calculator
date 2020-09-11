@@ -3,17 +3,22 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-
+    background-color: slateblue;
 
 }
 
 main {
     position: relative;
-    width: 30vw;
-    height: 70vh;
+    width: 40vw;
+    height: 50vh;
     margin: 5% auto;
     border-style: solid;
     border-width: 10px;
+    border-radius: 25px;
+    border-color: darkgray;
+    background-color: lightgrey;
+    box-shadow: 2px 2px 5px black;
+
 }
 
 #display {
@@ -23,6 +28,8 @@ main {
     margin: 10% auto;
     border-style: solid;
     border-width: 2px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 #digit-display {
@@ -58,10 +65,11 @@ main {
 #numerals {
     position: relative;
     width: 60%;
-    height: auto;
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2px;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 1px;
     float: left;
 }
 
@@ -72,23 +80,65 @@ main {
 
 #partition {
     position: relative;
-    width: 1px;
-    height: 30%;
-    margin: 0 5px;
+    width: 17px;
+    height: 100%;
+    display: inline-block;
     background-color: grey;
-    float: left;
     box-shadow: 0 0 3px silver;
+    text-align: center;
+}
+
+#symbols {
+    position: relative;
+    width: 35%;
+    height: 100%;
+    float: right;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr) 30px;
+    grid-template-areas: 
+        "operations equals"
+        "operations equals"
+        "operations backspace"
+        "operations backspace"
+        "clear clear";
 }
 
 #operations {
     position: relative;
-    width: 20%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2px;
+    width: 100%;
+    height: 100%;
+    grid-area: operations;
 
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+}
+/*
+#add {
+    grid-area: addition;
+}
+
+#subtract {
+    grid-area: subtraction;
+}
+
+#multiply {
+    grid-area: multiplication;
+}
+
+#divide {
+    grid-area: division;
+}*/
+
+#equals {
+    grid-area: equals;
+}
+
+#backspace {
+    grid-area: backspace;
 }
 
 #clear {
-    clear: both;
+    grid-area: clear
 }
